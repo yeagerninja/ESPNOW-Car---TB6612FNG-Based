@@ -1,5 +1,8 @@
-// Code for Reciever (Car) for 2WD Car
-// Modified by Scott Yeager
+// Code for Reciever (Car) for ESPNOW 2WD Car
+// Updated to utilize L298N Motor Driver
+// NOTE:  Because of some deprecated functions, its necessary to downgrade your board to version 2.0.17:
+// https://forum.arduino.cc/t/downgrade-from-v3-0-x-to-v2-0-x/1272211
+// Modified by Scott Yeager from various sources
 
 // Include Libraries
 #include <esp_now.h>
@@ -14,7 +17,7 @@ int enableLeftMotor=23;
 int leftMotorPin1=18;
 int leftMotorPin2=19;
 
-#define MAX_MOTOR_SPEED 240 //255
+#define MAX_MOTOR_SPEED 254 //255
 
 const int PWMFreq = 1000; /* 1 KHz */
 const int PWMResolution = 8;
